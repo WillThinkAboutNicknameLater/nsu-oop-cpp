@@ -3,21 +3,25 @@
 
 #include "CsvFile.h"
 
-void CreateCsvFile(const std::string& filePath);
+void CreateCsvFile(const std::string& sourceFilePath, const std::string& csvFilePath);
 
-int main() {
-	std::string filePath = { 0 };
-	std::cout << "Enter file path: ";
-	std::getline(std::cin, filePath);
+int main(int argc, char* argv[]) {
+	if (argc <= 2) {
+		std::cout << "Wrong number of arguments" << std::endl;
+		return 0;
+	}
 
-	CreateCsvFile(filePath);
+	std::string sourceFilePath = argv[1];
+	std::string csvFilePath = argv[2];
+
+	CreateCsvFile(sourceFilePath, csvFilePath);
 
 	system("pause");
 	return 0;
 }
 
-void CreateCsvFile(const std::string& filePath) {
+void CreateCsvFile(const std::string& sourceFilePath, const std::string& csvFilePath) {
 	TCsvFile csvFile;
-	csvFile.addFile(filePath);
+	csvFile.addFiles(sourceFilePath, csvFilePath);
 	csvFile.makeFormating();
 }

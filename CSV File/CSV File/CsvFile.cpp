@@ -1,11 +1,14 @@
 #include "CsvFile.h"
 
-#include <iomanip> 
 #include <map>
 
 bool IsLetter(char character) {
 	return (character >= 'A' && character <= 'Z') || (character >= 'a' && character <= 'z') || 
 		(character >= 'À' && character <= 'ß') || (character >= 'à' && character <= 'ÿ');
+}
+
+bool IsDigit(char character) {
+	return character >= '0' && character <= '9';
 }
 
 TCsvFile::TCsvFile() {
@@ -17,14 +20,14 @@ TCsvFile::~TCsvFile() {
 	_csvFile.close();
 }
 
-void TCsvFile::addFile(const std::string& fileName) {
-	_sourceFile.open(fileName + ".txt");
+void TCsvFile::addFiles(const std::string& sourceFilePath, const std::string& csvFilePath) {
+	_sourceFile.open(sourceFilePath);
 
 	if (!_sourceFile.is_open()) {
 		throw "Could not open file!";
 	}
 
-	_csvFile.open(fileName + " (CSV).txt");
+	_csvFile.open(csvFilePath);
 }
 
 void TCsvFile::makeFormating() {
@@ -32,11 +35,11 @@ void TCsvFile::makeFormating() {
 
 	std::multimap<size_t, std::string> sortedWordMap = _sortMap();
 
-	_csvFile << std::setw(30) << "Word" << std::setw(30) << "Frequency" << std::setw(32) << "Percentage" << std::endl << std::endl;
+	_csvFile << "Word" << ',' << "Frequency" << ',' << "Percentage" << std::endl << std::endl;
 
 	for (auto key = sortedWordMap.rbegin(); key != sortedWordMap.rend(); ++key) {
 		double wordFrequency = (double)((*key).first) / (double)(_wordCount);
-		_csvFile << std::setw(30) << (*key).second << std::setw(30) << (*key).first << std::setw(30) << wordFrequency * 100 << " %" << std::endl;
+		_csvFile << (*key).second << ',' << (*key).first << ',' << wordFrequency * 100 << " %" << std::endl;
 	}
 }
 
@@ -44,7 +47,7 @@ void TCsvFile::_makeMap() {
 	std::string word = { 0 };
 
 	while (_sourceFile >> word) {
-		while (!IsLetter(word.back())) {
+		while (!IsLetter(word.back()) && !IsDigit(word.back())) {
 			word.pop_back();
 		}
 		++_wordMap[word];

@@ -11,7 +11,7 @@ class TCsvFile {
 
 		~TCsvFile();
 
-		void addFile(const std::string& fileName);
+		void addFiles(const std::string& sourceFilePath, const std::string& csvFilePath);
 
 		void makeFormating();
 
