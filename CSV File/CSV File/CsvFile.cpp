@@ -7,10 +7,6 @@ bool IsLetter(char character) {
 		(character >= 'À' && character <= 'ß') || (character >= 'à' && character <= 'ÿ');
 }
 
-bool IsDigit(char character) {
-	return character >= '0' && character <= '9';
-}
-
 TCsvFile::TCsvFile() {
 	_wordCount = 0;
 }
@@ -47,7 +43,7 @@ void TCsvFile::_makeMap() {
 	std::string word = { 0 };
 
 	while (_sourceFile >> word) {
-		while (!IsLetter(word.back()) && !IsDigit(word.back())) {
+		while (!IsLetter(word.back())) {
 			word.pop_back();
 		}
 		++_wordMap[word];
