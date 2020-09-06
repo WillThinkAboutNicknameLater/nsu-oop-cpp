@@ -4,7 +4,7 @@
 
 bool IsLetter(char character) {
 	return (character >= 'A' && character <= 'Z') || (character >= 'a' && character <= 'z') || 
-		(character >= 'À' && character <= 'ß') || (character >= 'à' && character <= 'ÿ');
+		(character >= 'Ã€' && character <= 'ÃŸ') || (character >= 'Ã ' && character <= 'Ã¿');
 }
 
 TCsvFile::TCsvFile() {
@@ -43,7 +43,7 @@ void TCsvFile::_makeMap() {
 	std::string word = { 0 };
 
 	while (_sourceFile >> word) {
-		while (!IsLetter(word.back())) {
+		while (!word.empty() && !IsLetter(word.back())) {
 			word.pop_back();
 		}
 		++_wordMap[word];
