@@ -28,9 +28,9 @@ void TCsvFile::addFile(const std::string& fileName) {
 }
 
 void TCsvFile::makeFormating() {
-	makeMap();
+	_makeMap();
 
-	std::multimap<size_t, std::string> sortedWordMap = sortMap();
+	std::multimap<size_t, std::string> sortedWordMap = _sortMap();
 
 	_csvFile << std::setw(30) << "Word" << std::setw(30) << "Frequency" << std::setw(32) << "Percentage" << std::endl << std::endl;
 
@@ -40,7 +40,7 @@ void TCsvFile::makeFormating() {
 	}
 }
 
-void TCsvFile::makeMap() {
+void TCsvFile::_makeMap() {
 	std::string word = { 0 };
 
 	while (_sourceFile >> word) {
@@ -52,7 +52,7 @@ void TCsvFile::makeMap() {
 	}
 }
 
-std::multimap<size_t, std::string> TCsvFile::sortMap() {
+std::multimap<size_t, std::string> TCsvFile::_sortMap() {
 	std::multimap<size_t, std::string> sortedWordMap;
 
 	for (auto key = _wordMap.begin(); key != _wordMap.end(); ++key) {

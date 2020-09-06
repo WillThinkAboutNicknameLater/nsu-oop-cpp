@@ -22,7 +22,7 @@ class TCsvFile {
 		std::map<std::string, size_t> _wordMap;
 		size_t _wordCount;
 
-		void makeMap();
-		std::multimap<size_t, std::string> sortMap();
+		void _makeMap();
+		std::multimap<size_t, std::string> _sortMap();
 
 };
