@@ -4,6 +4,11 @@
 #include <map>
 #include <fstream>
 
+enum class FileFormat {
+	SOURCE,
+	CSV
+};
+
 class TCsvFile {
 	public: 
 
@@ -11,7 +16,7 @@ class TCsvFile {
 
 		~TCsvFile();
 
-		void addFiles(const std::string& sourceFilePath, const std::string& csvFilePath);
+		void addFile(FileFormat fileFormat, const std::string& filePath);
 
 		void makeFormating();
 
@@ -23,6 +28,6 @@ class TCsvFile {
 		size_t _wordCount;
 
 		void _makeMap();
-		std::multimap<size_t, std::string> _sortMap();
+		std::multimap<size_t, std::string> _sortMapByValue();
 
 };
