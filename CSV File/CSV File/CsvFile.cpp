@@ -32,11 +32,11 @@ void TCsvFile::makeFormating() {
 
 	std::multimap<size_t, std::string> sortedWordMap = _sortMapByValue();
 
-	_csvFile << "Word" << ';' << "Frequency" << ';' << "Percentage" << std::endl << std::endl;
+	_csvFile << "Word" << ',' << "Frequency" << ',' << "Percentage" << std::endl << std::endl;
 
 	for (auto key = sortedWordMap.rbegin(); key != sortedWordMap.rend(); ++key) {
 		double wordFrequency = (double)((*key).first) / (double)(_wordCount);
-		_csvFile << (*key).second << ';' << (*key).first << ';' << wordFrequency * 100 << " %" << std::endl;
+		_csvFile << (*key).second << ',' << (*key).first << ',' << wordFrequency * 100 << " %" << std::endl;
 	}
 }
 
