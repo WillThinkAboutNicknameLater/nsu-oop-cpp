@@ -4,11 +4,6 @@
 #include <map>
 #include <fstream>
 
-enum class FileFormat {
-	SOURCE,
-	CSV
-};
-
 class TCsvFile {
 	public: 
 
@@ -16,7 +11,9 @@ class TCsvFile {
 
 		~TCsvFile();
 
-		void addFile(FileFormat fileFormat, const std::string& filePath);
+		void addSourceFile(const std::string& filePath);
+
+		void addCsvFile(const std::string& filePath);
 
 		void makeFormating();
 

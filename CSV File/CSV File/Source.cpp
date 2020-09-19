@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
 
 void CreateCsvFile(const std::string& sourceFilePath, const std::string& csvFilePath) {
 	TCsvFile csvFile;
-	csvFile.addFile(FileFormat::SOURCE, sourceFilePath);
-	csvFile.addFile(FileFormat::CSV, csvFilePath);
+	csvFile.addSourceFile(sourceFilePath);
+	csvFile.addCsvFile(csvFilePath);
 	csvFile.makeFormating();
 }

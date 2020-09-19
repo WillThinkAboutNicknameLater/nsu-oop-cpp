@@ -15,15 +15,19 @@ TCsvFile::~TCsvFile() {
 	_csvFile.close();
 }
 
-void TCsvFile::addFile(FileFormat fileFormat, const std::string& filePath) {
-	if (fileFormat == FileFormat::SOURCE) {
-		_sourceFile.open(filePath);
+void TCsvFile::addSourceFile(const std::string& filePath) {
+	_sourceFile.open(filePath);
 
-		if (!_sourceFile.is_open()) {
-			throw "Could not open file!";
-		}
-	} else if (fileFormat == FileFormat::CSV) {
-		_csvFile.open(filePath);
+	if (!_sourceFile.is_open()) {
+		throw "Could not open file!";
+	}
+}
+
+void TCsvFile::addCsvFile(const std::string& filePath) {
+	_csvFile.open(filePath);
+	
+	if (!_csvFile.is_open()) {
+		throw "Could not open file!";
 	}
 }
 
