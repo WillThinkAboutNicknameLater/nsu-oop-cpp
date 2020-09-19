@@ -19,7 +19,7 @@ void TCsvFile::addSourceFile(const std::string& filePath) {
 	_sourceFile.open(filePath);
 
 	if (!_sourceFile.is_open()) {
-		throw "Could not open file!";
+		throw std::exception("Could not open file!");
 	}
 }
 
@@ -27,7 +27,7 @@ void TCsvFile::addCsvFile(const std::string& filePath) {
 	_csvFile.open(filePath);
 	
 	if (!_csvFile.is_open()) {
-		throw "Could not open file!";
+		throw std::exception("Could not open file!");
 	}
 }
 
