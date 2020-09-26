@@ -44,6 +44,8 @@ void TCsvFile::makeFormating() {
 	}
 }
 
+
+
 void TCsvFile::_makeMap() {
 	std::string word = { 0 };
 
@@ -59,7 +61,7 @@ void TCsvFile::_makeMap() {
 std::multimap<size_t, std::string> TCsvFile::_sortMapByValue() {
 	std::multimap<size_t, std::string> sortedWordMap;
 
-	for (auto key = _wordMap.begin(); key != _wordMap.end(); ++key) {
+	for (auto key = _wordMap.rbegin(); key != _wordMap.rend(); ++key) {
 		sortedWordMap.insert(std::pair<size_t, std::string>((*key).second, (*key).first));
 	}
 
