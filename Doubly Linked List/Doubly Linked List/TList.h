@@ -208,12 +208,20 @@ public:
 	}
 
 	TList& operator=(const TList& other) {
+		if (&other == this) {
+			return *this;
+		}
 		clear();
 		return *this += other;
 	}
 
 	TList& operator=(TList&& other) {
+		if (&other == this) {
+			return *this;
+		}
 		clear();
+		delete _headPtr; 
+		delete _tailPtr; 
 		_size = other._size;
 		_headPtr = other._headPtr;
 		_tailPtr = other._tailPtr;
@@ -287,7 +295,7 @@ public:
 		if (isEmpty()) {
 			throw TListIsEmpty();
 		}
-		if (position == end()) {
+		if (position == end() || position == begin() - 1) {
 			throw TIncorrectPosition();
 		}
 		TNode* node{ position._iteratorPtr };
@@ -372,6 +380,9 @@ bool operator!=(const TList<T>& left, const TList<T>& right) {
 
 template<typename T>
 bool operator==(const TList<T>& left, const TList<T>& right) {
+	if (&left == &right) {
+		return true;
+	}
 	if (left.getSize() != right.getSize()) {
 		return false;
 	}
