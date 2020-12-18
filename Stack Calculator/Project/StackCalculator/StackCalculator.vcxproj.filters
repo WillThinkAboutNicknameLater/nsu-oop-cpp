@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Factory Method">
+      <UniqueIdentifier>{3208f82d-75d3-4f32-9c98-733428c3a194}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands">
+      <UniqueIdentifier>{3994d10b-d083-4fb8-84b5-ab4cb7abbacc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="TApp.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="TComment.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="TDefine.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="TDivision.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="TMinus.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="TMultiplication.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="TPlus.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="TPop.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="TPrint.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="TPush.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="TSqrt.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="TContext.cpp">
+      <Filter>Factory Method</Filter>
+    </ClCompile>
+    <ClCompile Include="TOperation.cpp">
+      <Filter>Factory Method</Filter>
+    </ClCompile>
+    <ClCompile Include="TOperationFactory.cpp">
+      <Filter>Factory Method</Filter>
+    </ClCompile>
+    <ClCompile Include="TOperationMaker.cpp">
+      <Filter>Factory Method</Filter>
+    </ClCompile>
+    <ClCompile Include="IOperationMaker.cpp">
+      <Filter>Factory Method</Filter>
+    </ClCompile>
+    <ClCompile Include="TErrorHandler.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="TCommands.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TApp.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="TComment.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="TDefine.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="TDivision.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="TMinus.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="TMultiplication.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="TPlus.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="TPop.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="TPrint.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="TPush.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="TSqrt.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="TOperationMaker.h">
+      <Filter>Factory Method</Filter>
+    </ClInclude>
+    <ClInclude Include="TOperationFactory.h">
+      <Filter>Factory Method</Filter>
+    </ClInclude>
+    <ClInclude Include="TOperation.h">
+      <Filter>Factory Method</Filter>
+    </ClInclude>
+    <ClInclude Include="TContext.h">
+      <Filter>Factory Method</Filter>
+    </ClInclude>
+    <ClInclude Include="IOperationMaker.h">
+      <Filter>Factory Method</Filter>
+    </ClInclude>
+    <ClInclude Include="TErrorHandler.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="TCommands.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="StackCalculator.rc">
+      <Filter>Файлы ресурсов</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

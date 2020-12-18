@@ -1,0 +1,17 @@
+COMMANDS
+POP
+DEFINE number
+DEFINE number seven
+PUSH -7
+SQRT
+DEFINE zero 0
+PUSH zero
+PUSH 8
+/
++
+PRINT
+*
+PRINT
+POP
+POP
+COMMAND
