@@ -1,0 +1,9 @@
+﻿  GameController.cpp
+  Game.cpp
+  BotPlayerModel.cpp
+  GameModel.cpp
+  HumanPlayerModel.cpp
+  GameView.cpp
+  main.cpp
+  Создание кода...
+  Bulls and Cows.vcxproj -> D:\Study\Visual Studio Projects\Bulls and Cows\Debug\Bulls and Cows.exe
