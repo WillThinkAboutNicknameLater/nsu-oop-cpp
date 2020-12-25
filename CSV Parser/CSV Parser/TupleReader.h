@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <tuple>
+#include <string>
 
 #include "ErrorHandler.h"
 

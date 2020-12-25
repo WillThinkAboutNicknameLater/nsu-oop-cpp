@@ -15,7 +15,7 @@ private:
 	void skipLines() {
 		for (size_t idx{ 0 }; idx < _numberOfSkippedLines; ++idx) {
 			std::string skippedLine{ 0 };
-			_file >> skippedLine;
+			std::getline(_file, skippedLine);
 		}
 	}
 
@@ -50,7 +50,7 @@ public:
 			}
 			try {
 				std::string currentLine;
-				_parser._file >> currentLine;
+				std::getline(_parser._file, currentLine);
 				std::istringstream lineParser{ currentLine };
 				lineParser.imbue(std::locale{ std::locale::classic(), new OwnCType{ _parser._delimiter } });
 				lineParser >> *_tupleItr;
