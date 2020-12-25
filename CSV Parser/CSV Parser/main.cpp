@@ -6,7 +6,7 @@
 #include "ErrorHandler.h"
 
 int main() {
-	std::ifstream file{ "test.csv" };
+	std::ifstream file{ "Test.csv" };
 	if (file.fail()) {
 		std::cout << "The file could not be opened." << std::endl;
 		return 0;
