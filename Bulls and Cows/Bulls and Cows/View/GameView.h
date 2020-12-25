@@ -8,7 +8,8 @@ class GameView : public ObserverModel {
 public:
 	GameView(GameModel* model);
 	virtual void update();
-
+	void printWelcomeMessage();
+	void printCongratulationMessage();
 private:
 	GameModel* _gameModel;
 };

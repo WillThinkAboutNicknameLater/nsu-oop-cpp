@@ -1,0 +1,13 @@
+﻿  GameController.cpp
+  Game.cpp
+  main.cpp
+  BotPlayerModel.cpp
+  GameModel.cpp
+  HumanPlayerModel.cpp
+  ObservableModel.cpp
+  GameView.cpp
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  All 238 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  Bulls and Cows.vcxproj -> D:\Study\Visual Studio Projects\Bulls and Cows\Release\Bulls and Cows.exe

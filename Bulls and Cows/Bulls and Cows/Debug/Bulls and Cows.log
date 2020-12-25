@@ -1,8 +1,6 @@
 ﻿  GameController.cpp
   Game.cpp
-  BotPlayerModel.cpp
   GameModel.cpp
-  HumanPlayerModel.cpp
   GameView.cpp
   main.cpp
   Создание кода...

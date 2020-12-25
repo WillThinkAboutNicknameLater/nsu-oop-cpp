@@ -21,13 +21,9 @@ void Game::run() {
 	GameModel model;
 	GameView view{ &model };
 	GameController controller{ &model, player };
-	system("cls");
-	std::cout << "Secret number chosen (between 1000 and 9999)." << std::endl;
-	std::cout << "Start guessing!..." << std::endl;
+	view.printWelcomeMessage();
 	controller.start();
-	std::cout << "Congratulations, you did it!" << std::endl;
-	std::cout << "You took " << model.getTurnNumber() << " to guess the number" << std::endl;
-	std::cout << "Secret number is " << model.getFictionalNumber() << "." << std::endl;
+	view.printCongratulationMessage();
 	delete player;
 }
 

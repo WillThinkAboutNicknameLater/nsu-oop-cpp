@@ -13,7 +13,6 @@ public:
 	GameModel();
 	~GameModel() = default;
 	void setEstimatedNumber(const std::string& estimatedNumber);
-	void setGameState(GameState gameState);
 	void calculateResult();
 	std::string getFictionalNumber() const;
 	GameState getGameState() const;

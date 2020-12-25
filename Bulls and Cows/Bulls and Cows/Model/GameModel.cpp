@@ -17,10 +17,6 @@ void GameModel::setEstimatedNumber(const std::string& estimatedNumber) {
 	_estimatedNumber = estimatedNumber;
 }
 
-void GameModel::setGameState(GameState gameState) {
-	_gameState = gameState;
-}
-
 void GameModel::calculateResult() {
 	_numberOfBulls = 0;
 	_numberOfCows = 0;
@@ -45,7 +41,7 @@ void GameModel::calculateResult() {
 
 	++_turnNumber;
 	if (getEstimatedNumber() == getFictionalNumber()) {
-		setGameState(GameModel::GameState::WON);
+		_gameState = GameModel::GameState::WON;
 	}
 	notifyUpdate();
 }
