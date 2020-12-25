@@ -2,7 +2,6 @@
 
 #include "../Model/GameModel.h"
 #include "../Model/ObserverModel.h"
-#include "../Model/GameModel.h"
 
 class GameView : public ObserverModel {
 public:
