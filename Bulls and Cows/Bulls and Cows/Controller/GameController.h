@@ -2,7 +2,6 @@
 
 #include "../Model/GameModel.h"
 #include "../Model/PlayerInterfaceModel.h"
-#include "../Model/HumanPlayerModel.h"
 
 class GameController {
 public:
