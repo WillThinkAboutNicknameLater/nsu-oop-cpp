@@ -1,6 +1,5 @@
 #pragma once
 
-#include <iostream>
 #include <tuple>
 
 const std::string LEFT_BORDER{ "{ " };

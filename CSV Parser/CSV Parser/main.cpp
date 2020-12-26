@@ -12,13 +12,15 @@ int main() {
 		return 0;
 	}
 
-	CSVParser<size_t, std::string, int, std::string> parser{ file, 0 };
+	CSVParser<size_t, std::string, int, std::string, double> parser{ file, 3 };
 	try {
 		for (auto tuple : parser) {
 			std::cout << tuple << std::endl;
 		}
-	} catch (ErrorHandler& e) {
-		std::cout << e.what() << std::endl;
+	} catch (NotEnoughData& e) {
+		std::cout << e.what() << "Line: " << e.getLineNumber() << "." << std::endl;
+	} catch (FailedToReadData& e) {
+		std::cout << e.what() << "Line: " << e.getLineNumber() << ". Column: " << e.getColumnNumber() << "." << std::endl;
 	}
 
 	file.close();

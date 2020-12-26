@@ -15,11 +15,17 @@ public:
 };
 
 class NotEnoughData final : public ErrorHandler {
+	size_t _lineNumber;
 public:
-	NotEnoughData(size_t columnNumber) : ErrorHandler{ "Not enough data! Column: " + std::to_string(columnNumber) + ". " } { };
+	NotEnoughData(size_t lineNumber) : _lineNumber{ lineNumber }, ErrorHandler{ "Not enough data! " } { };
+	size_t getLineNumber() const { return _lineNumber; }
 };
 
 class FailedToReadData final : public ErrorHandler {
+	size_t _lineNumber;
+	size_t _columnNumber;
 public:
-	FailedToReadData(size_t columnNumber) : ErrorHandler{ "Failed to read data! Column: " + std::to_string(columnNumber) + ". " } { };
+	FailedToReadData(size_t lineNumber, size_t columnNumber) : _lineNumber{ lineNumber }, _columnNumber{ columnNumber }, ErrorHandler{ "Failed to read data! " } { };
+	size_t getLineNumber() const { return _lineNumber; }
+	size_t getColumnNumber() const { return _columnNumber; }
 };
