@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <string>
 
 class ErrorHandler : public std::exception {
 protected:
