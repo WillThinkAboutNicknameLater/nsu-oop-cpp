@@ -18,12 +18,12 @@ private:
 			std::string skippedLine{ 0 };
 			std::getline(_file, skippedLine);
 		}
-		_startingPosition = _file.tellg();
 	}
 
 public:
 	CSVParser(std::ifstream& file, size_t numberOfSkippedLines = 0, char delimiter = ';') : _file{ file }, _numberOfSkippedLines{ numberOfSkippedLines }, _delimiter{ delimiter } {
 		skipLines();
+		_startingPosition = _file.tellg();
 	}
 
 	class InputIterator {
